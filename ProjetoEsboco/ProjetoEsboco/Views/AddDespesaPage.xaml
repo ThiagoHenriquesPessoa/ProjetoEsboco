@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjetoEsboco.Views.AddDespesaPage"
+             xmlns:vm="clr-namespace:ProjetoEsboco.ViewModels"
+             Title="{Binding Title}" >
+
+    <ContentPage.BindingContext>
+        <vm:AddDespesaViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#96d1ff</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout BackgroundColor="#006494">
+        <Frame BackgroundColor="White" Padding="20, 10" Margin="20, 30, 20, 10" >
+            <Entry x:Name="etValorRendaAdd" Keyboard="Numeric" Placeholder="Informe um valor" Margin="-13,10,10,-10" />
+        </Frame>
+        <StackLayout Orientation="Horizontal" Margin="20, 10">
+            <Picker x:Name="pckTipoDespesa" HorizontalOptions="Start" Title="Escolha a finalidade" BackgroundColor="White" >
+                <Picker.Items>
+                    <x:String>CORREÇÃO DE ERRO</x:String>
+                    <x:String>MELHORIA DE SISTEMA</x:String>
+                    <x:String>NOVA FUNCIONALIDADE</x:String>
+                    <x:String>NOVO RELATÓRIO/ETIQUETA</x:String>
+                    <x:String>OBRIGAÇÕES FISCAIS</x:String>
+                    <x:String>MIGRAÇÃO DE SISTEMA</x:String>
+                </Picker.Items>
+            </Picker>
+            <Switch IsToggled="true" OnColor="#1b98e0" ThumbColor="AliceBlue" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Margin="10"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" Margin="20, 10">
+            <Picker x:Name="pckCartao" HorizontalOptions="Start" Title="Escolha a finalidade" BackgroundColor="White" >
+                <Picker.Items>
+                    <x:String>CORREÇÃO DE ERRO</x:String>
+                    <x:String>MELHORIA DE SISTEMA</x:String>
+                    <x:String>NOVA FUNCIONALIDADE</x:String>
+                    <x:String>NOVO RELATÓRIO/ETIQUETA</x:String>
+                    <x:String>OBRIGAÇÕES FISCAIS</x:String>
+                    <x:String>MIGRAÇÃO DE SISTEMA</x:String>
+                </Picker.Items>
+            </Picker>
+            <Frame BackgroundColor="White" Padding="20, 0, 32,0" Margin="10, 0, 0, 0" >
+                <Entry x:Name="etQtdeParcelaAdd" Keyboard="Numeric" Placeholder="Parcelas"  HorizontalOptions="StartAndExpand"/>
+            </Frame>
+        </StackLayout>
+       
+        <DatePicker Format="D"  BackgroundColor="White" Margin="20,10"/>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" >
+            <Button Text="Cancelar" Margin="20,10"/>
+            <Button Text="Salvar" Margin="20,10"/>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
