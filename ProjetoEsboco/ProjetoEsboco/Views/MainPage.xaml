@@ -4,7 +4,7 @@
              x:Class="ProjetoEsboco.Views.MainPage"
              xmlns:vm="clr-namespace:ProjetoEsboco.ViewModels"
              Title="{Binding Title}">
-    
+
     <ContentPage.BindingContext>
         <vm:MainViewModel />
     </ContentPage.BindingContext>
@@ -14,5 +14,20 @@
             <Color x:Key="Accent">#96d1ff</Color>
         </ResourceDictionary>
     </ContentPage.Resources>
-    
+    <StackLayout BackgroundColor="#006494">
+        <StackLayout>
+            <Label Text="Renda Total" FontSize="Title" TextColor="White" Padding="30, 20, 10, 5" Margin="-10"/>
+            <Frame BackgroundColor="White" Padding="20, 10" Margin="20, 0, 20, 10" >
+                <Entry x:Name="etValorRendaTotal" Keyboard="Numeric" Margin="-13,10,10,-10" />
+            </Frame>
+        </StackLayout>
+        <StackLayout>
+            <Label Text="Despesa Total" FontSize="Title" TextColor="White" Padding="30, 20, 10, 5" Margin="-10"/>
+            <Frame BackgroundColor="White" Padding="20, 10" Margin="20, 0, 20, 10" >
+                <Entry x:Name="etValorDespesaTotal" Keyboard="Numeric" Margin="-13,10,10,-10" />
+            </Frame>
+        </StackLayout>
+        
+    </StackLayout>
+
 </ContentPage>
