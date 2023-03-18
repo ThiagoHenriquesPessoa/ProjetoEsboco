@@ -31,11 +31,15 @@
                         <x:String>Alimentação</x:String>
                         <x:String>Combustível</x:String>
                         <x:String>Escola</x:String>
+                        <x:String>Energia</x:String>
+                        <x:String>Água</x:String>
+                        <x:String>Internet</x:String>
+                        <x:String>Celular</x:String>
                         <x:String>Outros</x:String>
                     </Picker.Items>
                 </Picker>
                 <Label Text="Fixa" FontSize="Title" Scale="0.7" TextColor="White" Padding="30, 15, 10, 5" Margin="-10"/>
-                <Switch IsToggled="true" OnColor="#1b98e0" ThumbColor="AliceBlue"  />
+                <Switch IsToggled="true" OnColor="#1b98e0" ThumbColor="AliceBlue"  Margin="10, 0, 10, 0"/>
             </StackLayout>
         </StackLayout>
 
@@ -53,7 +57,7 @@
                 </StackLayout>
             </StackLayout>
             <StackLayout>
-                <Label Text="Qtde Parcelas" FontSize="Title" Scale="0.7" TextColor="White" Padding="0, 5, 10, 5" Margin="-10"/>
+                <Label Text="Qtde Parcelas" FontSize="Title" Scale="0.7" TextColor="White" Padding="0, 5, 20, 5" Margin="-10"/>
                 <StackLayout>
                     <Frame BackgroundColor="White" Padding="0, 0, 45,0" Margin="10, 0, 0, 0" >
                         <Entry x:Name="etQtdeParcelaAdd" Keyboard="Numeric" Placeholder="Parcelas"  HorizontalOptions="StartAndExpand"/>
