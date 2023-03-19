@@ -26,7 +26,7 @@
         <StackLayout>
             <Label Text="Tipo da renda" FontSize="Title" Scale="0.7" TextColor="White" Padding="-40, 5, 10, 5" Margin="-10"/>
             <StackLayout Orientation="Horizontal" Margin="20, 0, 20, 10">
-                <Picker x:Name="pckFinalidade" HorizontalOptions="StartAndExpand" Title="Escolha a finalidade" BackgroundColor="White" >
+                <Picker x:Name="pckTipoRenda" HorizontalOptions="StartAndExpand" Title="Escolha a finalidade" BackgroundColor="White" >
                     <Picker.Items>
                         <x:String>Salario</x:String>
                         <x:String>Emprestimo</x:String>
@@ -35,17 +35,17 @@
                     </Picker.Items>
                 </Picker>
                 <Label Text="Fixa" FontSize="Title" Scale="0.7" TextColor="White" Padding="30, 15, 10, 5" Margin="-10"/>
-                <Switch IsToggled="true" OnColor="#1b98e0" ThumbColor="AliceBlue" VerticalOptions="Center" HorizontalOptions="EndAndExpand"/>
+                <Switch x:Name="swtFixo" IsToggled="False" OnColor="#1b98e0" ThumbColor="AliceBlue" VerticalOptions="Center" HorizontalOptions="EndAndExpand"/>
             </StackLayout>
         </StackLayout>
 
         <StackLayout>
             <Label Text="Data de criação" FontSize="Title" Scale="0.7" TextColor="White" Padding="-40, 5, 0, -5" Margin="-10"/>
-            <DatePicker Format="D"  BackgroundColor="White" Margin="20,10"/>
+            <DatePicker x:Name="dpDataCriacao" Format="D"  BackgroundColor="White" Margin="20,10"/>
         </StackLayout>
        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" >
-            <Button Text="Cancelar" Margin="20,10"/>
-            <Button Text="Salvar" Margin="20,10"/>
+            <Button Text="Cancelar" Margin="20,10" Clicked="ButtonCancelar_Clicked"/>
+            <Button Text="Salvar" Margin="20,10" Clicked="ButtonSalvar_Clicked"/>
         </StackLayout>
     </StackLayout>
 
