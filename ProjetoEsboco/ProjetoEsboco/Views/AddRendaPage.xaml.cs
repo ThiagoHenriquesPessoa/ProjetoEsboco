@@ -22,7 +22,7 @@ namespace ProjetoEsboco.Views
         private void ButtonCancelar_Clicked(object sender, System.EventArgs e)
         {
             etValorRendaAdd.Text = string.Empty;
-            pckTipoRenda = new Picker { Title = "Select a monkey", TitleColor = Color.Red };
+            pckTipoRenda = new Picker ();
             swtFixo.IsToggled = false;
             dpDataCriacao.Date = DateTime.Now;
         }
@@ -40,7 +40,7 @@ namespace ProjetoEsboco.Views
 
 
             etValorRendaAdd.Text = string.Empty;
-            pckTipoRenda = new Picker { Title = "Select a monkey", TitleColor = Color.Red };
+            pckTipoRenda = new Picker();
             swtFixo.IsToggled = false;
             dpDataCriacao.Date = DateTime.Now;
 
